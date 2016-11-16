@@ -1,13 +1,11 @@
-<!-- <h1><% @items.each do |item| %></h1>
-<h1>Name : <%= item.name %></h1> 
-<h1>Category: <%= item.category %></h1>
-<h1>Cart_Id: <%= item.cart_id %></h1> 
-<% end %>
- -->
+
 <h1> Output One </h1>
 <% @input_one.each do |input|%>
-<h1>Name : <%= input.name %></h1> 
-<h1>Price: <%= input.price %></h1>
-<h1> Tax: <%= input.total_tax %></h1>
+<h2>Name : <%= input.name %></h2> 
+<h2>Price: <%= input.price %></h2>
+<h2> Sales tax: <%= input.total_tax %></h2>
 <%end%>
 
+
+<h1>Tax: <%= @tax %></h1>
+<h1>Total: <%= @total %></h1>
