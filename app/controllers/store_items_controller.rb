@@ -15,7 +15,7 @@ class StoreItemsController < ApplicationController
 	subtotal = 0
     @input_one.each do |one|
       price = one.price
-      tax = one.import_duty
+      tax = one.sale_tax
       subtotal += tax * price
     end
     @tax = subtotal * 0.09

@@ -2,7 +2,7 @@ class Item < ApplicationRecord
 	belongs_to :receipt
 
 	def sale_tax
-		if category != "food" || "book" || "medical"
+		if category != "food" && category != "book" && category != "medical"
 		 price * 0.10
 		end
 	end
