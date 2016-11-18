@@ -12,13 +12,14 @@ class StoreItemsController < ApplicationController
 		# end
 
 
-	subtotal = 0
-    @input_one.each do |one|
-      price = one.price
-      tax = one.sale_tax
-      subtotal += tax * price
-    end
-    @tax = subtotal * 0.09
-    @total = subtotal + @tax
-end 
-end
+		subtotal = 0
+		@input_one.each do |one|
+			@price = one.total_price
+			tax = one.sale_tax
+			subtotal += tax * @price
+			end
+			@total_tax = subtotal * 0.09
+			@total = subtotal + @price
+		end 
+	end
+

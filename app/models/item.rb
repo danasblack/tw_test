@@ -4,11 +4,17 @@ class Item < ApplicationRecord
 	def sale_tax
 		if category != "food" && category != "book" && category != "medical"
 		 price * 0.10
+		else
+			0
 		end
 	end
 
+	def total_price
+		price + sale_tax
+	end
+
 	def import_duty
-		price * 0.09
+		0.09
 	end
 
 	def total_tax
